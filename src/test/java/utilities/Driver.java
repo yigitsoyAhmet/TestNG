@@ -19,7 +19,7 @@ public class Driver {
 
     public static WebDriver getDriver() {
         String istenenBrowser = ConfigReader.getProperty("browser");
-//chrome.firfox,safari,edge
+//chrome.firefox,safari,edge
 
         if (driver == null) {
             switch (istenenBrowser) {

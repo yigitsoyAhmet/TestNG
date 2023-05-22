@@ -16,14 +16,17 @@ public class C01_Priority {
      */
     @Test
     public void youtubeTesti(){
+
         System.out.println("Youtube");
     }
     @Test(priority = 3)
     public void wiseTesti(){
+
         System.out.println("Wise Quarter");
     }
-    @Test
+    @Test(groups = "smoke")
     public void amazonTesti(){ // priority yazilmazsa 0 degeri alir
+
         System.out.println("Amazon");
     }
 }

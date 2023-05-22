@@ -39,7 +39,7 @@ public class C03_SoftAssertion {
         softAssert.assertTrue(sayi<1000,"sayi 1000'den kucuk olmali");
         softAssert.assertFalse(sayi%3==0,"sayi 3'e bolunememeli");//3 ile bolunemediğini test
 
-        softAssert.assertAll();
+        softAssert.assertAll();//bunu demezsek test direk passed olur,failed olanlarda raporlama olmaz
 
     }
 }

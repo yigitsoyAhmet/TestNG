@@ -9,7 +9,7 @@ import utilities.Driver;
 
 public class C02_qualitydemyLoginTest {
 
-    @Test
+    @Test(groups = "smoke")
     public void test01() throws InterruptedException {
         //qualitydemy anasayfaya gidin login linkine tıklayın
         Driver.getDriver().get("https://www.qualitydemy.com");

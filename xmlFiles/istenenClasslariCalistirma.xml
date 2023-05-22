@@ -1,0 +1,18 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Istenen class'lari calistirma">
+
+    <test name="smokeTest">
+
+        <classes>
+
+            <class name="tests.day15_POM.C05_QualitydemyLogin"></class>
+            <class name="tests.day15_POM.C03_qualitydemyNegatifLoginTesti"></class>
+            <class name="tests.day16_POM_Assertions.C03_SoftAssertion"></class>
+
+        </classes>
+
+    </test>
+
+
+</suite>

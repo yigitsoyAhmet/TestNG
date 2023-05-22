@@ -1,5 +1,6 @@
 package tests.day15_POM;
 
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.QualitydemyPage;
@@ -9,7 +10,7 @@ public class C03_qualitydemyNegatifLoginTesti {
 
 
     @Test
-    public void test01() {
+    public void gecersizIsimSifreTesti() {
 
         //qualitydemy anasayfaya gidin ilk login linkine tıklayın
         Driver.getDriver().get("https://www.qualitydemy.com");
@@ -22,6 +23,7 @@ public class C03_qualitydemyNegatifLoginTesti {
         //password olarak heyecandir yazin
         qualitydemyPage.passwordKutusu.sendKeys("heyecandir");
         //logine tıklayın
+        Driver.getDriver().findElement(By.xpath("//a[@onclick='cookieAccept();']")).click();
         qualitydemyPage.loginButonu.click();
 
         //giriş yapılamadıgını test edin
