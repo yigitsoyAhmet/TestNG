@@ -17,7 +17,8 @@ public class C05_QualitydemyLogin {
 
        Driver.getDriver().get(ConfigReader.getProperty("qdUrl"));
        QualitydemyPage qualitydemyPage=new QualitydemyPage();
-      qualitydemyPage.cookies.click();
+       Driver.getDriver().findElement(By.xpath("//a[@onclick='cookieAccept();']")).click();
+       qualitydemyPage.cookies.click();
        qualitydemyPage.ilkLoginLinki.click();
 
 

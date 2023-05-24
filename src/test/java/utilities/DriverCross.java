@@ -9,20 +9,21 @@ import org.openqa.selenium.safari.SafariDriver;
 
 import java.time.Duration;
 
-public class Driver {
+public class DriverCross {
+
     private static WebDriver driver;
 
-    private Driver() {
-        //Singleton Pattern kullanılarak istenmeyen yontemlerle
-        // driver objesine erisilmesini engelledik.cons private yaptık obje olusturlmasın dedik.
+    private DriverCross() {
+
     }
 
-    public static WebDriver getDriver() {
-        String istenenBrowser = ConfigReader.getProperty("browser");
-         //chrome.firefox,safari,edge
+    public static WebDriver getDriver(String browser) {
 
+        browser = browser == null ? ConfigReader.getProperty("browser") : browser;
+        //bu satir emniyet subabimiz eger parametre olarak null gonderilirse
+        // config.prop deki browser degerini alacak
         if (driver == null) {
-            switch (istenenBrowser) {
+            switch (browser) {
                 case "firefox":
                     WebDriverManager.firefoxdriver().setup();
                     driver = new FirefoxDriver();
