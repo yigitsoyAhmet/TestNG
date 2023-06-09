@@ -28,7 +28,7 @@ public class C01_RaporluAmazonSearchTesti extends TestBaseRapor {
     String expectedIcerik=ConfigReader.getProperty("amazonExpectedIcerik");
 
     Assert.assertTrue(actualSonucYazisi.contains(expectedIcerik));
-    extentTest.pass("Belirlenen "+ConfigReader.getProperty("amazonAranacakKelime")+" aratildiginda,arama sonucunda  expected icerik oldugu test edildi ");
+    extentTest.pass("Belirlenen " +ConfigReader.getProperty("amazonAranacakKelime")+"" + " aratildiginda,arama sonucunda  expected icerik oldugu test edildi ");
 
 
     Driver.closeDriver();
